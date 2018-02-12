@@ -9,16 +9,9 @@ module.exports = function (app) {
     var feedback = require('../controllers/fabio_feedback.server.controller');
 
     //handle the routing of get and post request
-    app.get('/', function (req, res) {
-        res.render('index', { title: 'Login Page' })
-    });
-    // app.get('/login', index.render);
-    app.post('/thankyou', showThanks.render);
-    //app.get('/admin', admin.render);
-    // app.get('/logout', logout.render);
-    //
-    app.post('/', function (req, res) {
-        console.log("POST request - User name = " + req.body.username);
-        index.showFeedBackPage(req, res);
-    });
+    app.get('/', index.render);
+    app.post('/', index.login);
+
+    app.get('/feedback', feedback.render);
+    app.post('/feedback', feedback.save);
 };

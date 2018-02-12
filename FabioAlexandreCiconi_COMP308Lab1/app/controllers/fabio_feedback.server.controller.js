@@ -1,14 +1,35 @@
-﻿
-exports.showThanks = function (req, res) {
-
-
-    //make a reference to the session object
-    //var session = req.session;
-    //store the username in session object
-    //session.username = req.body.username;
+﻿exports.save = function (req, res) {
     console.log("username in session: ");
-    res.redirect('/thankyou');
-    //res.end('done');
+
+    res.render('thankyou', {
+        title: 'THANK YOU!!!!!!',
+    });
+
+    res.end('done');
+
+
+};
+
+exports.render = function (req, res) {
+
+    var session = req.session;
+
+    //store username in session object
+    var username = session.username ;
+
+    if (username) {
+        res.render('fabio_feedback', {
+            title: 'Feedback page',
+            username: username
+        });
+
+    }
+    else {
+
+        res.redirect('/');
+    }
+
+    console.log("GET request - User name = " + session.username);
 
 
 };

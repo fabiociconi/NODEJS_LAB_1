@@ -12,19 +12,6 @@ const configureExpress = require('./config/express');
 // Create a new Express application instance
 const app = configureExpress();
 
-//to load the files that are in the public directory
-//app.use(express.static('public'));
-//specify views folder
-//app.set('views', 'app/views');
-//specify the view engine
-//app.set('view engine', 'ejs')
-// render the loginview when a request is made to path /login
-//app.use('/login', function (req, res) {
-//    // Use the 'response' object to render a view
-//    res.render('loginview', { //pas values to ejs view
-//        loginMessage: "Please login to use the app:",
-//    });
-//});
 // Use the Express application instance to listen to the '3000' port
 app.listen(3000);
 
