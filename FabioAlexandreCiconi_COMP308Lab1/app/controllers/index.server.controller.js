@@ -13,10 +13,9 @@ exports.showFeedBackPage = function (req, res) {
     //store username in session object
     session.username = username;
 
-    console.log("In index function - User name = " + session.username);
+   // console.log("In index function - User name = " + session.username);
     //check if session object contains the username
     if (session.username) {
-
         //display the ejs page
         res.render('fabio_feedback', {
             title: 'Feedback page',
@@ -29,9 +28,7 @@ exports.showFeedBackPage = function (req, res) {
         res.redirect('/');
     }
 
-
     console.log("GET request - User name = " + session.username);
-
 
 
 };

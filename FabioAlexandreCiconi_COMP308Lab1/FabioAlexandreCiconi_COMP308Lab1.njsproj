@@ -28,6 +28,9 @@
     <DebugSymbols>true</DebugSymbols>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\controllers\fabio_feedback.server.controller.js">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\controllers\index.server.controller.js">
       <SubType>Code</SubType>
     </Compile>
@@ -54,6 +57,9 @@
       <SubType>Code</SubType>
     </Content>
     <Content Include="package.json" />
+    <Content Include="public\css\form.css">
+      <SubType>Code</SubType>
+    </Content>
     <Content Include="README.md" />
   </ItemGroup>
   <ItemGroup>
