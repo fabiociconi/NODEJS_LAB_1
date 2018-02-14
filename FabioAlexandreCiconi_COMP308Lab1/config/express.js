@@ -7,7 +7,6 @@ const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 const session = require('express-session');
 
-
 // Define the Express configuration method
 module.exports = function () {
     // Create a new Express application instance
